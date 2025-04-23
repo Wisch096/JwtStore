@@ -20,6 +20,15 @@ public partial class Email : ValueObject
 
     public string Addres { get; }
     public string Hash => Addres.ToBase64();
+    
+    public static implicit operator string(Email email) 
+        => email.ToString();
+    
+    public static implicit operator Email(string address) 
+        => new Email(address);
+    
+    public override string ToString()
+        => Addres;
 
     [GeneratedRegex(Pattern)]
     private static partial Regex EmailRegex();
