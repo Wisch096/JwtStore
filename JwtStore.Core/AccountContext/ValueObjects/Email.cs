@@ -14,12 +14,15 @@ public partial class Email : ValueObject
             throw new Exception("Invalid email address");
         
         Addres = addres.Trim().ToLower();
-        
-        
     }
 
     public string Addres { get; }
     public string Hash => Addres.ToBase64();
+    public Verification Verification { get; private set; } = new();
+
+    public void ResendVerification()
+       => Verification = new Verification();
+    
     
     public static implicit operator string(Email email) 
         => email.ToString();
