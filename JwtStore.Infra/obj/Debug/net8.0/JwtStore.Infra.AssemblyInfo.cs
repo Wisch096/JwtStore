@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JwtStore.Infra")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e6e7534c52fa15aee01cf2d4d651822691f9e95")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93f14a32a6b472a435f702a16a6c1abdaf615c62")]
 [assembly: System.Reflection.AssemblyProductAttribute("JwtStore.Infra")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JwtStore.Infra")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
