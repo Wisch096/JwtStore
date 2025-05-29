@@ -32,13 +32,13 @@ public class Password : ValueObject
         string password,
         short saltSize = 16,
         short keySize = 32,
-        int iterations = 1000,
+        int iterations = 10000,
         char splitChar = '.')
     {
         if(string.IsNullOrEmpty(password))
             throw new Exception("Password cannot be null or empty.");
 
-        password += Configurations.Secrets.PasswordSaltKey;
+        password += Configuration.Secrets.PasswordSaltKey;
         
         using var algorithm = new Rfc2898DeriveBytes(
             password, saltSize, iterations, HashAlgorithmName.SHA256);
