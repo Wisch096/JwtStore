@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JwtStore.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93f14a32a6b472a435f702a16a6c1abdaf615c62")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b30edffaad8fdeb94663644b491d44eeaacf261c")]
 [assembly: System.Reflection.AssemblyProductAttribute("JwtStore.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JwtStore.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

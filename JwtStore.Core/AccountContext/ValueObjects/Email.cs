@@ -16,6 +16,11 @@ public partial class Email : ValueObject
         Addres = addres.Trim().ToLower();
     }
 
+    protected Email()
+    {
+        
+    }
+
     public string Addres { get; }
     public string Hash => Addres.ToBase64();
     public Verification Verification { get; private set; } = new();
