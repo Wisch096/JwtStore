@@ -13,7 +13,7 @@ public partial class Email : ValueObject
         if(string.IsNullOrWhiteSpace(addres))
             throw new Exception("Invalid email address");
         
-        Addres = addres.Trim().ToLower();
+        Address = addres.Trim().ToLower();
     }
 
     protected Email()
@@ -21,8 +21,8 @@ public partial class Email : ValueObject
         
     }
 
-    public string Addres { get; }
-    public string Hash => Addres.ToBase64();
+    public string Address { get; }
+    public string Hash => Address.ToBase64();
     public Verification Verification { get; private set; } = new();
 
     public void ResendVerification()
@@ -36,7 +36,7 @@ public partial class Email : ValueObject
         => new Email(address);
     
     public override string ToString()
-        => Addres;
+        => Address;
 
     [GeneratedRegex(Pattern)]
     private static partial Regex EmailRegex();
