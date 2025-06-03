@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LbyAQbSXpZw=",
+  "dgSpecHash": "1S/8J2RWBqk=",
   "success": true,
   "projectFilePath": "C:\\repos\\JwtStore\\JwtStore.Core\\JwtStore.Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\wisch\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512"
+  ],
   "logs": []
 }
