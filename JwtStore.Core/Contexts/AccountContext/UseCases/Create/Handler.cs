@@ -1,10 +1,11 @@
 ﻿using JwtStore.Core.AccountContext.Entities;
 using JwtStore.Core.AccountContext.ValueObjects;
 using JwtStore.Core.Contexts.AccountContext.UseCases.Create.Contracts;
+using MediatR;
 
 namespace JwtStore.Core.Contexts.AccountContext.UseCases.Create;
 
-public class Handler
+public class Handler : IRequestHandler<Request, Response>
 {
     private readonly IRepository _repository;
     private readonly IService _service;
@@ -65,5 +66,35 @@ public class Handler
         }
         
         #endregion
+
+        #region 04. Persiste os dados
+
+        try
+        {
+            await _repository.SaveAsync(user, cancellationToken);
+        }
+        catch 
+        {
+            return new Response("Falha ao persistir os dados", 500);
+        }
+
+        #endregion
+
+        #region 05. Envia E-mail de ativação
+
+        try
+        {
+            await _service.SendVerificationEmailAsync(user, cancellationToken);
+        }
+        catch 
+        {
+           // Do nothing
+        }
+
+        #endregion
+
+        return new Response(
+            "Conta criada", 
+            new ResponseData(user.Id, user.Name, user.Email));
     }
 }

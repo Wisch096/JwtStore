@@ -88,4 +88,9 @@ public class Password : ValueObject
 
         return keyTocheck.SequenceEqual(key);
     }
+
+    public bool Challenge(string plainTextPassword)
+    {
+        return Verify(Hash, plainTextPassword);
+    }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JwtStore.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3be357d3fc0ce079433d4f3cafc94bdd9a1a186a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+adf08bf030d0459827cd0f9e56604b2fc75dce8b")]
 [assembly: System.Reflection.AssemblyProductAttribute("JwtStore.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JwtStore.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
